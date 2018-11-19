@@ -1,0 +1,697 @@
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+
+body {
+font-family: "Helvetica", sans-serif;
+  color: black;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  height: 64px;
+
+}
+
+header nav.mobile {
+  display: none;
+
+}
+
+@media only screen and (min-width: 500px) and (max-width: 600px){
+  header .logo {
+    display: none;
+  }
+header nav{
+    display: block;
+    width: 100%;
+  }
+header nav ul{
+  display: flex;
+  justify-content: space-around;
+}
+}
+@media only screen and (max-width: 500px) {
+ header .logo,
+ header nav{
+    display: none;
+  }
+header nav.mobile {
+  width: 100%;
+  display: block;
+}
+header nav.mobile ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav.mobile li{
+  margin-right: 1rem;
+}
+}
+
+.a {
+  width: 30px;
+  height: 30px;
+  margin-right: 100px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  padding-left: 24px;
+  height: 32px;
+}
+h2 span {
+  font-weight: 200;
+  color: black;
+}
+h2 {
+  font-size: 20px;
+  margin-left: -100px;
+}
+nav  ul a{
+  color: black;
+  text-decoration: none;
+}
+nav  ul a:hover{
+  color:lightblue;
+}
+ul {
+display: flex;
+flex-direction: row;
+list-style: none;
+}
+ul li {
+  margin: 8px;
+  font-size: 14px;
+
+
+}
+ul li:first-child{
+  margin-left: 0px;
+}
+ul li:last-child {
+  margin-right: 24px;
+}
+
+
+/*Banner*/
+.banner {
+  background-color: lightgrey;
+  display: flex;
+  align-items: center;
+}
+
+.left-container{
+  width: 60%;
+}
+
+@media only screen and (max-width: 470px){
+  .banner {
+    display: block;
+    align-items: center;
+    border: 1px solid lightgrey;
+    margin-bottom: 0rem;
+  }
+  .left-container{
+    width: 100%;
+  }
+  .banner .banner-image{
+    margin: 0;
+  }
+  .banner .banner-content{
+    display: block;
+    margin-right: 1.5rem;
+    width: 100%;
+  }
+  .banner .banner-content h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .banner .banner-content span {
+    background-color: grey;
+    margin-bottom: 2rem;
+    margin: 0 auto;;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    padding: 1rem 2.5rem 1rem 2.5rem;
+  }
+}
+
+
+.banner h1{
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.banner h3 {
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+.banner-image {
+background-image: url("../capstone_colmar_assets/images/banner.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 25rem;
+margin: 32px 24px;
+
+
+}
+
+.banner-content {
+  width: 40%;
+  height: auto;
+  text-align: left;
+}
+
+.banner-content h1, h3{
+  margin-left: 1.5rem;
+}
+
+.banner-content span {
+  background-color: #333333;
+  color: white;
+  font-size: .9rem;
+  text-align: center;
+  padding:  8px;
+  width: 70%;
+  display: block;
+  margin-left: 1.5rem;
+}
+
+.banner-content span a {
+  text-decoration: none;
+  color: white;
+}
+
+.banner-content span a:hover {
+  color: lightblue;
+}
+
+/*General Information*/
+.general-information {
+  display: flex;
+}
+
+.general-information .left-container {
+    border-right: .5px solid grey;
+
+  }
+.left-image{
+  height: 20rem;
+  background-image: url("../capstone_colmar_assets/images/information-main.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 2rem;
+
+}
+
+.left-content {
+  text-align: left;
+  margin-left: 24px;
+}
+.left-content h1  {
+  margin-top: 2rem;
+padding-bottom: 1.5rem;
+  font-size: 1.8rem;
+
+
+}
+.left-content p {
+  font-size: 0.9rem;
+  margin-top:-1rem;
+  margin-right: 1.5rem;
+}
+
+.left-content h6{
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+
+.right-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+}
+
+.item {
+ display: flex;
+ flex-direction: row;
+ flex-grow: 3;
+}
+
+@media only screen and (max-width: 470px){
+
+  .general-information {
+    display: block;
+    width: 100%;
+  }
+  .general-information .left-container {
+    display: none;
+  }
+  .right-container {
+    width: 100%;
+    display: block;
+    margin-top: 0rem;
+  }
+
+.item {
+    display: block;
+    width: 100%;
+  }
+
+  .item .item-content {
+    margin: 0rem 2rem 4rem 2rem;
+  }
+
+.item .first-image {
+  width: auto;
+  height: 14rem;
+  background-image: url("../capstone_colmar_assets/images/information-orientation.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 1rem;
+  margin-right: 1rem;
+
+  }
+  .item .second-image {
+    width: auto;
+    height: 14rem;
+    background-image: url("../capstone_colmar_assets/images/information-campus.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    margin: 0rem 1rem 1rem 1rem;
+}
+   .right-container .third-image {
+     width: auto;
+     height: 14rem;
+     background-image: url("../capstone_colmar_assets/images/information-guest-lecture.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     margin: 0rem 1rem 1rem 1rem;
+   }
+
+   .right-container .third-item {
+     display: block;
+     background-color: white;
+   }
+
+   .right-container .item-content {
+     margin: 0rem 2rem 4rem 2rem;
+   }
+
+}
+
+.third-item{
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 3;
+}
+.item-content{
+  width: 65%;
+  text-align: left;
+}
+.item-content h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+.item-content a {
+  text-decoration: none;
+  font-size: .8rem;
+  color: #327acd;
+}
+.item-content a:hover {
+  color: lightblue;
+}
+.item-content p {
+  font-size: .8rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  line-height: 1.4rem;
+}
+.first-image {
+  width: 35%;
+  height: auto;
+  background-image: url("../capstone_colmar_assets/images/information-orientation.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0rem 1rem 2rem 1rem;
+}
+.second-image {
+  width: 35%;
+  height: auto;
+  background-image: url("../capstone_colmar_assets/images/information-campus.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0rem 1rem 1rem 1rem;
+}
+.third-image {
+  width: 35%;
+  height: auto;
+  background-image: url("../capstone_colmar_assets/images/information-guest-lecture.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 1rem 1rem 1rem 1rem;
+
+}
+
+
+/*Start learning section*/
+
+.courses-container {
+background-color: lightgrey;
+  width: 100%;
+  align-items: center;
+margin-bottom: 2rem;
+}
+
+.offer {
+margin: 0rem 4.5rem 2rem 4.5rem;
+padding-bottom: 2rem;
+
+}
+
+.offer h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  text-align: center;
+  margin-left: 0rem;
+  letter-spacing: .2rem;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+
+.offer .content {
+  text-align: left;
+margin-top: 0;
+padding: 1rem 1rem 1.5rem 1rem;
+}
+
+.offer .content h3 {
+  margin-left: 0;
+  font-size: 1rem;
+
+}
+.offer .content h5{
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  font-weight: 400;
+}
+
+.offer .content p {
+  font-size: .8rem;
+
+}
+.course-item {
+  width: 30%;
+  background-color: white;
+}
+
+.row1 {
+  display: flex;
+  flex-grow: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.row2 {
+  display: flex;
+  flex-grow: row;
+  justify-content: space-between;
+}
+
+.img1 {
+  width: 100%;
+  height: 8rem;
+  background-image: url("../capstone_colmar_assets/images/course-software.jpg");
+  background-size: cover;
+  background-position: center;
+
+}
+
+.img2 {
+  width: 100%;
+  height: 8rem;
+  background-image: url("../capstone_colmar_assets/images/course-computer-art.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.img2 {
+  width: 100%;
+  height: 8rem;
+  background-image: url("../capstone_colmar_assets/images/course-computer-art.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.img3 {
+  width: 100%;
+  height: 8rem;
+  background-image: url("../capstone_colmar_assets/images/course-design.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.img4 {
+  width: 100%;
+  height: 8rem;
+  background-image: url("../capstone_colmar_assets/images/course-data.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.img5 {
+  width: 100%;
+  height: 8rem;
+  background-image: url("../capstone_colmar_assets/images/course-business.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.img6 {
+  width: 100%;
+  height: 8rem;
+  background-image: url("../capstone_colmar_assets/images/course-marketing.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.courses-mobile {
+  display: none;
+}
+@media only screen and (max-width: 470px) {
+  .courses-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .offer  {
+  display: none;
+  }
+
+  .courses-mobile {
+  display: block;
+  width: 100%;
+  background-color: white;
+  }
+
+.courses-mobile h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  text-align: center;
+  margin-left: 0rem;
+  letter-spacing: .2rem;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+
+  .courses-mobile h5 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  padding: 1rem 1rem 1.5rem 1rem;
+  background-color: lightgrey;
+  margin: 0rem 1rem .5rem 1rem;
+}
+  .courses-mobile a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .courses-mobile a:hover {
+    color: white;
+  }
+
+  }
+}
+/*Thesis Exhibit*/
+.thesis {
+  display: block;
+}
+.thesis h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  text-align: center;
+  margin-left: 0rem;
+  letter-spacing: .2rem;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.exhibit {
+  display: flex;
+  flex-direction: row;
+margin-left: 1.5rem;
+margin-top: 2rem;
+}
+
+.thesis-text h3{
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+}
+.thesis-text p{
+  text-align: left;
+  font-size: .8rem;
+  padding-left: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  line-height: 1.2rem;
+}
+
+.exhibit .left-container {
+  margin-right: 1.5rem;
+}
+.exhibit-container {
+  width: 40%;
+  display: block;
+}
+
+.exhibit-container .content{
+  width: 65%;
+  text-align: left;
+  margin-right: 2rem;
+}
+
+.exhibit-container .content h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 2rem;
+
+}
+.exhibit-container .content p{
+  font-size: .8rem;
+  margin-top: -1rem;
+}
+.exhibit-container .item-a {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  background-color: lightgrey;
+
+}
+.exhibit-container .item-b {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+
+}
+
+.img2a {
+  width: 35%;
+  height: 5.5rem;
+  background-image: url("../capstone_colmar_assets/images/thesis-fisma.jpg");
+  background-size: cover;
+  margin: 1rem;
+  padding-bottom: 1rem;
+}
+
+ .img2b {
+  width: 35%;
+  height: 5.5rem;
+  background-image: url("../capstone_colmar_assets/images/thesis-now-and-then.jpg");
+  background-size: cover;
+  margin: 1rem;
+  padding-bottom: 1rem;
+
+}
+
+
+@media only screen and (max-width: 470px) {
+  .right, .text {
+    display: none;
+  }
+
+  .exhibit-container {
+    display: none;
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  border-top: .5px solid grey;
+}
+
+footer span {
+
+  margin-left: 1.5rem;
+}
+
+footer ul li a{
+  text-decoration: none;
+  color: black;
+}
+
+footer ul li a:hover{
+  color: lightblue;
+}
+
+@media only screen and (max-width: 470px) {
+ .exhibit .left-container {
+   margin: none;
+ }
+  footer ul {
+    display: none;
+  }
+
+  footer span {
+    font-size: .8rem;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+  }
+}
